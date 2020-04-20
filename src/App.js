@@ -1,15 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import Welcome from './components/Welcome';
+import Counter from './components/Counter';
 
 function App() {
   return (
     <div className="App">
-     <Welcome 
-      firstname="Diego" 
-      lastname="Almeida"
-    />
+      <Counter />
     </div>
   );
 }
