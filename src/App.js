@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
 
-import Hello from './components/Hello';
+import Welcome from './components/Welcome';
 
 function App() {
   return (
     <div className="App">
-      <Hello name="Diego">
-        <p>Programador Javascript</p>
-      </Hello>
-      <hr/>
-      <Hello name="Laura" />
+     <Welcome firstname="Diego" lastname="Almeida"/>
+     <hr/>
+     <Welcome firstname="Laura" lastname="Anghel">
+       <button>Options</button>
+     </Welcome>
     </div>
   );
 }
