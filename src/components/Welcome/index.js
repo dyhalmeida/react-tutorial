@@ -2,12 +2,30 @@ import React, { Component } from 'react';
 
 class Welcome extends Component {
 
+  /**
+   * O state do componente é similar as props, 
+   * mas é privado e totalmente controlado pelo componente.
+   */
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: 'Click the button below to subscribe',
+    }
+  }
+
+  handleClick() {
+    this.setState({
+      message: 'Subscription successful'
+    });
+  }
+
   render() {
-    console.log(this.props.children)
     return (
       <div>
-        <h2>Welcome {this.props.firstname} {this.props.lastname}</h2>
-        {this.props.children}
+        <h2>Welcome { this.props.firstname } { this.props.lastname }</h2>
+        <p>{this.state.message}</p>
+        <button onClick={ () => this.handleClick() }>Subscribe</button>
       </div>
     );
   }
