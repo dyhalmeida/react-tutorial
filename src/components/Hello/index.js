@@ -1,16 +1,10 @@
 import React from 'react';
 
-const Hello = (props) => {
-
-    /**
-     * Props são somente leituras
-     * Função e Class nunce deve modificar
-     * suas próprias props
-     */
+const Hello = ({ name, children }) => {
     return (
       <div>
-        <h1>Hello {props.name}</h1>
-        {props.children}
+        <h1>Hello { name }</h1>
+        { children} 
       </div>
     );
 
